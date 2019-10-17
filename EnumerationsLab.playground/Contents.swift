@@ -6,6 +6,14 @@ import UIKit
 
 // Your code here
 
+
+
+enum iOSDeviceType  {
+    case iPhone (model:String)
+    case iPad (String)
+    case iWatch
+}
+
 // Uncomment the lines below to test your solution
 
 //let myiPad = iOSDeviceType.iPad
@@ -13,14 +21,14 @@ import UIKit
 
 // b. Adjust your code above so that iPhone and iPad have associated values of type String which represents the model number.  Create an instance of a .iPhone("8+") and assign it to a variable called myPhone
 
-// Your code here
+let myPhone = iOSDeviceType.iPhone(model: "8+")
 
 // Uncomment the lines below to test your solution
 
-//switch myPhone {
-//case let .iPhone(model): assert(model == "8+", "Was expecting a model type of 8+, but got \(model)")
-//default: fatalError("Was expecting an iPhone but got \(myPhone)")
-//}
+switch myPhone {
+case let .iPhone(model): assert(model == "8+", "Was expecting a model type of 8+, but got \(model)")
+default: fatalError("Was expecting an iPhone but got \(myPhone)")
+}
 
 // Question Two
 
@@ -38,8 +46,7 @@ enum Step {
     case left
     case right
 }
-
-// Your function here
+//func getPosition(startingAt: (Int, Int), afterSteps: []) ->
 
 // Uncomment the lines below to test your solution
 
